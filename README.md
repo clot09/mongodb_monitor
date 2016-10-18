@@ -1,7 +1,7 @@
-# mongodb_monitor
+# check_m.sh
 a shell to monitor mongodb replicaset status
 
-#  add db config in mysql database 
+##  add db config in mysql database 
 - 1 first create a database in mysql that including the mongodb info
 ```sql
 CREATE TABLE `serverlist` (
@@ -37,8 +37,16 @@ in slave table,role 1 means master ;2 means secondary ;3 means arbiter
 in serverlist table you just need input the master server info
 
 
-#   config the database info in the shell scripts 
+##   config the database info in the shell scripts 
 - 1 
 you should config the mysql ip,user,password in the shell scripts 
 and config the mongodb monitor username,password in the shell scripts
 please give the admin role to the monitor user  
+
+
+# calc_mongo_size.sh
+you should config the database info into the shell scirpts ,include username,passwod,dbport,ipadress
+
+the mysql config info is like abrove
+
+the mongodb output size is in Gb 
