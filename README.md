@@ -5,13 +5,12 @@ a shell to monitor mongodb replicaset status
 - 1 first create a database in mysql that including the mongodb info
 ```sql
 CREATE TABLE `serverlist` (
-  `SerID` int(11) NOT NULL COMMENT '服务器ID，唯一标示'
   `dbname` varchar(30) NOT NULL COMMENT 'database name',
   `server_name` varchar(50) NOT NULL COMMENT '服务器名',
   `IP` char(16) NOT NULL,
   `osport` int(11) DEFAULT NULL,
   `dbport` smallint(6) DEFAULT NULL,
-  `status` tinyint(4) DEFAULT NULL COMMENT '3:mongodb(-3:下架)',
+  `status` tinyint(4) DEFAULT NULL COMMENT '3:mongodb',
   `inserttime` timestamp NULL DEFAULT CURRENT_TIMESTAMP COMMENT '插入时间',
   `updatetime` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '插入时间',
   PRIMARY KEY (`SerID`),
